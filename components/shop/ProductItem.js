@@ -27,7 +27,7 @@ const ProductItem = (props) => {
             <View style={styles.imageContainer}>
               <Image style={styles.image} source={{ uri: props.image }} />
             </View>
-            <View style={styles.detail}>
+            <View style={styles.details}>
               <Text style={styles.title}>{props.title}</Text>
               <Text style={styles.price}>${props.price.toFixed(2)}</Text>
             </View>
@@ -84,10 +84,11 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   title: {
+    fontFamily: 'open-sans-bold',
     fontSize: 18,
-    marginVertical: 4,
   },
   price: {
+    fontFamily: 'open-sans',
     fontSize: 14,
     color: '#888',
   },
