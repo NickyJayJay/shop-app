@@ -7,6 +7,7 @@ import CartItem from '../../components/shop/CartItem';
 import * as cartActions from '../../store/actions/cart';
 import * as orderActions from '../../store/actions/orders';
 import Order from '../../models/order';
+import OrdersScreen from './OrdersScreen';
 
 const CartScreen = (props) => {
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
@@ -61,6 +62,10 @@ const CartScreen = (props) => {
       />
     </View>
   );
+};
+
+OrdersScreen.navigationOptions = {
+  headerTitle: 'Your Orders',
 };
 
 const styles = StyleSheet.create({
